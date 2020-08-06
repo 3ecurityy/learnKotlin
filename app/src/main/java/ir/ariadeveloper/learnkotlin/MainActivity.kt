@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,15 +36,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     fun String.println() {
-
+        println(this)
     }
 
     fun Number.println() {
         println(this)
     }
-
 
     fun max(vararg numbers: Int): Int {
         var max = numbers[0]
