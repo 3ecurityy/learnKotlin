@@ -24,10 +24,11 @@ class MainActivity : AppCompatActivity() {
         5.0.println()
 
         var sum = 0
-
         (1 to 10).action {
             sum += it
             textview.text = sum.toString()
         }
+
+        println(2 p 3)
     }
 }
