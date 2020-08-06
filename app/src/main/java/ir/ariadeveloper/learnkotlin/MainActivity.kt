@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         textview.text = max(10, 30, 20).toString()
         textview.text = sum(10, 30, 20).toString()
         textview.text = average(1.5, 2.8, 2.0).formatted(1, 10)
@@ -22,12 +23,16 @@ class MainActivity : AppCompatActivity() {
         "s".println()
         5.0.println()
 
-
         var sum = 0
-        (1..10).action {
+        
+        (1 to 10).action {
             sum += it
             textview.text = sum.toString()
         }
+    }
+
+    infix fun Int.to(other: Int): IntRange {
+        return this..other
     }
 
     fun IntRange.action(block: (Int) -> Unit) {
