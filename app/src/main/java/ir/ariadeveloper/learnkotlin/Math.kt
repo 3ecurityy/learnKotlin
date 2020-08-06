@@ -1,5 +1,12 @@
 package ir.ariadeveloper.learnkotlin
 
+fun factorial(n: Int): Long {
+    if (n == 1) {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
 fun max(vararg numbers: Int): Int {
     var max = numbers[0]
     for (num in numbers) {

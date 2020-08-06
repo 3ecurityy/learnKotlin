@@ -13,3 +13,15 @@ fun String.println() {
 fun Number.println() {
     println(this)
 }
+
+fun cont(start: Int, to: Int) {
+    var range: IntProgression
+    if (start < to) {
+        range = start to to
+    } else {
+        range = start downTo to
+    }
+    for (i in range) {
+        println(i)
+    }
+}
