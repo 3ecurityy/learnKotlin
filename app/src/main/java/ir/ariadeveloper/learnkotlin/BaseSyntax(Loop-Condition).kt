@@ -55,4 +55,12 @@ fun loop() {
             println(result)
         }
     }
+
+    //Continue
+    for (i in 1 to 100) {
+        if (i < 50) {
+            continue
+        }
+        println(i)
+    }
 }
