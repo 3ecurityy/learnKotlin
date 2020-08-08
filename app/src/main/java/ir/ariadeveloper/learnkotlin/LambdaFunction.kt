@@ -19,7 +19,13 @@ fun connect(
     println(url)
     println(port)
     println(timeOut)
-    onSuccess()
-    onFaild(-1)
+    var result = -1
+
+    if (result < 0) {
+        onFaild(result)
+    } else {
+        onSuccess()
+    }
+
     return true
 }
