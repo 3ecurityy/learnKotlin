@@ -8,7 +8,8 @@ fun loop() {
     var conditionWhile = 10
     while (conditionWhile <= 10) {
         println("this is While Loop")
-        conditionWhile++ }
+        conditionWhile++
+    }
 
     for (i in 1 to 10) {
         println("this is for Loop")
@@ -31,8 +32,8 @@ fun loop() {
         5 -> {
             println("this is When 5")
         }
+        else -> print("else")
     }
-
     do {
         println("Do")
     } while (false)
