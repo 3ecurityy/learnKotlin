@@ -23,14 +23,14 @@ fun loop() {
         2 -> {
             println("this is When 2")
         }
-        3 -> {
-            println("this is When 3")
+        3, 4, 5 -> {
+            println("3 or 4 or 5")
         }
-        4 -> {
-            println("this is When 4")
+        in 0..Int.MAX_VALUE -> {
+            println("Positive")
         }
-        5 -> {
-            println("this is When 5")
+        is Int -> {
+            println("is int")
         }
         else -> print("else")
     }
