@@ -8,3 +8,18 @@ fun multiplyTable(start: Int, end: Int, block: (Int, Int) -> Unit, afterFristItr
         afterFristItr()
     }
 }
+
+fun connect(
+    url: String = "https://sampleApi.com",
+    port: Int = 21,
+    timeOut: Long = 1000L * 3,
+    onSuccess: () -> Unit = {},
+    onFaild: (Int) -> Unit = {}
+): Boolean {
+    println(url)
+    println(port)
+    println(timeOut)
+    onSuccess()
+    onFaild(-1)
+    return true
+}

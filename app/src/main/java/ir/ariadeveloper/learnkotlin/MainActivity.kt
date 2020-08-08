@@ -39,5 +39,14 @@ class MainActivity : AppCompatActivity() {
         }, {
             println()
         })
+
+
+        connect(
+            "https://sampleapi.com",
+            21,
+            1000L * 3,
+            onSuccess = { println("Connected") },
+            onFaild = { errCode -> println("Faild With Error Code $errCode ") /*you can use $it(def name) or Change The name(errCode)*/ })
+
     }
 }
