@@ -16,12 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /*
         textview.text = max(10, 30, 20).toString()
         textview.text = sum(10, 30, 20).toString()
         textview.text = average(1.5, 2.8, 2.0).formatted(1, 10)
-
-        "s".println()
-        5.0.println()
+        */
 
         var sum = 0
         (1 to 10).action {
@@ -29,6 +28,16 @@ class MainActivity : AppCompatActivity() {
             textview.text = sum.toString()
         }
 
+        /*
         println(2 p 3)
+        "s".println()
+        5.0.println()
+        */
+
+        multiplyTable(1, 9, { i, j ->
+            print((String.format("%-3d", i * j)))
+        }, {
+            println()
+        })
     }
 }
